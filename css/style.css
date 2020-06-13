@@ -1,0 +1,417 @@
+/* Global Config */
+
+@font-face {
+  font-family: Catamaran-Regular;
+  src: url(../static/fonts/Catamaran-Regular.ttf);
+}
+
+@font-face {
+  font-family: Catamaran-Bold;
+  src: url(../static/fonts/Catamaran-Bold.ttf);
+}
+
+@font-face {
+  font-family: Noto-Regular;
+  src: url(../static/fonts/NotoSansHK-Regular.otf);
+}
+
+@font-face {
+  font-family: Noto-Bold;
+  src: url(../static/fonts/NotoSansHK-Bold.otf);
+}
+
+@font-face {
+  font-family: MeriendaOne;
+  src: url(../static/fonts/MeriendaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: MarkoOne;
+  src: url(../static/fonts/MarkoOne-Regular.ttf);
+}
+
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
+  --color-black-trans: rgba(0, 0, 0, 0.75);
+  --color-outer-space-crayola: hsla(174, 34%, 24%, 1);
+  --color-queen-blue: hsla(211, 65%, 65%, 1);
+  --color-yale-blue: hsla(209, 100%, 60%, 1);
+  --color-indigo-dye: hsla(203, 73%, 34%, 1);
+  --color-indigo-dye-trans: hsla(203, 73%, 34%, 0.5);
+  --color-champagne-pink: hsla(30, 11%, 93%, 1);
+  --color-main-bg: hsla(24, 100%, 100%, 1);
+  --color-platinum: hsla(0, 0%, 92%, 1);
+  --color-silver: hsla(0, 0%, 75%, 1);
+  --color-orange: hsla(6, 73%, 77%, 1);
+  --color-sweet-brown: hsla(6, 71%, 62%, 1);
+  --color-brandy: hsla(6, 56%, 51%, 1);
+  --color-maroon: hsla(349, 99%, 47%, 1);
+
+  font-size: calc(0.8em + 0.6vw);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  margin-bottom: 0;
+}
+
+.blue-button {
+  font-family: Noto-Bold;
+  color: var(--color-yale-blue);
+  border: 0.1rem solid var(--color-yale-blue);
+  transition: all 0.3s linear;
+  background-color: transparent;
+}
+
+.blue-button:hover {
+  background-color: var(--color-yale-blue);
+  color: var(--color-white);
+}
+
+.silver-button {
+  font-family: Noto-Bold;
+  color: var(--color-outer-space-crayola);
+  /* border: 0.1rem solid var(--color-silver); */
+  transition: all 0.3s linear;
+  background-color: var(--color-silver);
+}
+
+.silver-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-yale-blue);
+}
+
+.blue-text {
+  color: var(--color-yale-blue);
+}
+
+.platinum-text {
+  color: var(--color-platinum);
+}
+
+.silver-text {
+  color: var(--color-silver);
+}
+
+.queen-blue-text {
+  color: var(--color-queen-blue);
+}
+
+.dark-text {
+  color: var(--color-outer-space-crayola);
+}
+
+.font-script {
+  font-family: MeriendaOne;
+}
+
+.font-marko {
+  font-family: MarkoOne;
+}
+
+.font-catamaran {
+  font-family: Catamaran-Regular;
+}
+
+body {
+  background-color: var(--color-orange-blaze-orange);
+  font-family: Catamaran-Regular;
+}
+
+.title-underline {
+  height: 0.2em;
+  width: 40%;
+  background-color: var(--color-outer-space-crayola);
+  position: relative;
+}
+
+.title-underline-center {
+  height: 0.4em;
+  width: 50%;
+  background-color: var(--color-yale-blue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-icons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.card-icon {
+  background-color: var(--color-yale-blue);
+  color: var(--color-white);
+}
+
+.card-icon:hover {
+  background-color: var(--color-indigo-dye);
+  color: var(--color-white);
+}
+
+/* End of Global Config */
+
+/* Header */
+#header {
+  background-color: var(--color-indigo-dye);
+  min-height: 15vh;
+}
+
+.navbar-brand > img {
+  height: 10vh;
+  width: 15vh;
+}
+
+.navbar-toggler {
+  border: none !important;
+  transition: all 0.2s linear;
+  padding: 0.6em;
+}
+
+.navbar-toggler:hover {
+  background-color: var(--color-maroon);
+}
+
+.navbar-toggler:hover .navbar-toggler-wrapper {
+  color: var(--color-white);
+}
+
+.navbar-toggler-wrapper {
+  transition: all 0.2s linear;
+}
+
+.nav-item-active {
+  border-bottom: 0.15em solid var(--color-queen-blue);
+}
+
+.nav-phone-icon {
+  border: 0.1em solid var(--color-yale-blue);
+  padding: 0.3em;
+  border-radius: 50%;
+}
+
+/* End of Header */
+
+/* Hero Section */
+
+.hero-text,
+.hero-image {
+  min-height: 85vh;
+  background-color: var(--color-silver);
+}
+
+.hero-image {
+  background-image: url(../static/images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-text-footer {
+  position: relative;
+  height: 15vh;
+  background-color: var(--color-yale-blue);
+  color: var(--color-white);
+}
+
+.hero-image-text {
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* End of Hero Section */
+
+/* About Section */
+#about {
+  min-height: 50vh;
+  background-color: var(--color-platinum);
+}
+
+.blockquote {
+  border-left: 0.3em solid var(--color-yale-blue);
+}
+/* End of About Section */
+
+/* Featured Section */
+
+#featured {
+  background-color: var(--color-silver);
+}
+
+/* End of Featured Section */
+
+/* Sign Section */
+#sign {
+  background-color: var(--color-yale-blue);
+}
+/* End of Sign Section */
+
+/* Service Section */
+#service {
+  background: linear-gradient(
+      var(--color-black-trans),
+      var(--color-black-trans)
+    ),
+    url(../static/images/hero.jpg) center/cover fixed no-repeat;
+  /* min-height: 30em; */
+}
+
+.single-service-icon {
+  font-size: 1.4rem;
+  color: var(--color-yale-blue);
+  border: 0.1em solid var(--color-yale-blue);
+  transition: all 1s linear;
+  width: 2.5em;
+  height: 3em;
+}
+
+/* .single-service-icon.icon-lightbulb {
+  font-size: 1.8rem;
+}
+
+.single-service-icon.icon-cogs {
+  font-size: 1.5rem;
+} */
+
+.single-service-icon:hover {
+  background-color: var(--color-yale-blue);
+  color: var(--color-white);
+}
+
+.service-link {
+  color: var(--color-yale-blue);
+}
+
+.service-link:hover {
+  color: var(--color-white);
+}
+/* End of Service Section */
+
+/* Gallery Section */
+#gallery {
+  background-color: var(--color-platinum);
+}
+
+.gallery-photo {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.gallery-photo > img {
+  transition: all 0.5s linear;
+}
+
+.gallery-plus {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s linear;
+}
+
+.gallery-room {
+  background-color: var(--color-yale-blue);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  transition: all 0.5s linear;
+}
+
+.gallery-photo:hover {
+  background: var(--color-black-trans);
+}
+
+.gallery-photo:hover > img {
+  opacity: 0.4;
+}
+
+.gallery-photo:hover .gallery-plus {
+  opacity: 1;
+}
+
+.gallery-photo:hover .gallery-room {
+  transform: translate(-50%, 0);
+}
+/* End of Gallery Section */
+
+/* Tour Section */
+#tour {
+  background: linear-gradient(
+      var(--color-black-trans),
+      var(--color-black-trans)
+    ),
+    url(../static/images/hero.jpg) center/cover fixed no-repeat;
+}
+
+.tour-icon {
+  color: var(--color-yale-blue);
+  font-size: 1.8rem;
+  padding: 0.35em 0.25em;
+  border-radius: 0.5em;
+  background-color: var(--color-platinum);
+  transition: all 0.6s linear;
+}
+
+.tour-icon:hover {
+  color: var(--color-white);
+  background-color: var(--color-yale-blue);
+}
+/* End of Tour Section */
+
+/* Map Section */
+#map {
+  background-color: var(--color-silver);
+}
+/* End of Map Section */
+
+/* Footer Section */
+#footer {
+  background-color: var(--color-indigo-dye);
+}
+
+.footer-logo > img {
+  height: 10vh;
+  width: 15vh;
+}
+
+/* .footer-title {
+  font-size: 0.9rem;
+} */
+
+.footer-link {
+  color: var(--color-sweet-brown);
+  transition: all 0.3s linear;
+}
+
+.footer-link:hover {
+  color: var(--color-white);
+}
+/* End of Footer Section */
